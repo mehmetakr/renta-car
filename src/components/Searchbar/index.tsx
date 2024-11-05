@@ -64,7 +64,7 @@ const Searchbar = () => {
 
             <div className="searchbar__item">
 
-                <ReactSelect onChange={(e)  => e &&  setmake(e.value)} options={options}
+                <ReactSelect defaultInputValue={searchparams.get("make")!}onChange={(e)  => e &&  setmake(e.value)} options={options}
                     className="w-full text-black " />
                 <Searchbutton  designs='sm:hidden'/>
             </div>
@@ -72,7 +72,8 @@ const Searchbar = () => {
 
             <div className='searchbar__item'>
                 <img src="/model-icon.png" width={25} alt="araç" className='absolute ml-6' />
-                <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => setmodel(e.target.value)} type="text"
+                <input 
+                defaultValue={searchparams.get("model")!} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setmodel(e.target.value)} type="text"
                     placeholder='ör:Audi'
                     className=' m-4  p-4 rounded-xl text-black searchbar__input' />
                 <Searchbutton  designs= "sm:hidden"/>

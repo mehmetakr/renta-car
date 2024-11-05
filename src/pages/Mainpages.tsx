@@ -7,6 +7,7 @@ import { CarType } from "../types"
 import Card from "../components/Card"
 import { useSearchParams } from "react-router-dom"
 import Showmore from "../components/Showmore"
+import { fuels, years } from "../constants"
 
 
 
@@ -28,8 +29,8 @@ const Mainpage = () => {
 
     // useeffect görevi bileşenin ekrana basılma olayını izler...
     useEffect(() => {
-            // key valuu tipindeki dizileri objeye cevırmeye yarar.
-       const paramsobj=  Object.fromEntries(params.entries());
+        // key valuu tipindeki dizileri objeye cevırmeye yarar.
+        const paramsobj = Object.fromEntries(params.entries());
         fetchcars(paramsobj).then((data) => setcars(data))
             .catch(() => seterror(true));
     }, [params]);
@@ -51,14 +52,13 @@ const Mainpage = () => {
                     {/* Filtreleme alanı */}
 
                     <div className="home__filters">
-
                         <Searchbar />
                     </div>
 
                     <div className="home__filter-container">
 
-                        <Customfilter />
-                        <Customfilter />
+                        <Customfilter paramName={"fuel_type"} title={"Yakıt tipi "}   options={fuels} />
+                        <Customfilter  paramName={"year"} title ={"Üretim tarihi "} options= {years} />
 
                     </div>
                 </div>
@@ -103,16 +103,16 @@ const Mainpage = () => {
                                 ))}
                             </div>
 
-                            <Showmore/>
+                            <Showmore />
 
                         </section>
 
 
                 }
-                
+
 
             </div>
-            
+
         </div>
 
     )

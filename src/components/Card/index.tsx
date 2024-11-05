@@ -59,10 +59,10 @@ const Card = ({ car }: Icardprops) => {
                 </div>
                 <div className="flex-center flex-col">
                     <img width={25} className="" src="/tire.svg" alt="" />
-                    <p>{car.transmission === "a" ? "Otomatik" : "Manuel"}</p>
+                    <p>{translate [car.drive]}</p>
                 </div><div className="flex-center flex-col">
                     <img width={25} src="/gas.svg" alt="" />
-                    <p>{car.transmission === "a" ? "Otomatik" : "Manuel"}</p>
+                    <p>{car.fuel_type}</p>
                 </div>
 
                 {/* buton */}

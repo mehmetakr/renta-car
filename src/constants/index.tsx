@@ -1,3 +1,4 @@
+import { Placeholder } from "react-select/animated";
 
 
 export const makes = [
@@ -44,7 +45,7 @@ export const makes = [
 ];
 
 export const years = [
-    { label: 'farketmez', value: '' },
+    { label: 'Üretim Yılı', value: '' },
     { label: '2015', value: '2015' },
     { label: '2016', value: '2016' },
     { label: '2017', value: '2017' },
@@ -58,8 +59,8 @@ export const years = [
 
 export const fuels = [
     {
-        label: 'farketmez',
-        value: '',
+        label: 'Benzinli',
+        value: 'benzin',
     },
     {
         label: 'Gaz',
