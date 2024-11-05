@@ -34,7 +34,7 @@ Proje geliştirmeye açık olup, katkıda bulunmak isteyenlere açıktır. Lütf
 
 # Proje Gif
 
-<img src="./projegif.gif">
+<img src="./public/projegif.gif">
 
 
 
